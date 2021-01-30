@@ -1,0 +1,50 @@
+.task-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.4rem;
+    color: whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+}
+.task-text{
+    padding: 0.5rem 2rem;
+    font-size: 2rem;
+    font-family: kalam !important;
+}
+.task-btn-container{
+    margin-left: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.task-delete-btn , .task-update-btn{
+    color: whitesmoke;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem 0.6rem;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+
+    & i{
+        font-size: 1.4rem;
+    }
+    
+}
+
+.task-container-updating input {
+    background-color: transparent;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.8rem;
+    color: rgb(185, 185, 185);
+}
+
+@media screen and (max-width: 600px){
+    .task-btn-container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+}

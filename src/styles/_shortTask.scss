@@ -1,0 +1,23 @@
+.shortTask-parent-container{
+	display: flex;
+	padding-top: 0.6rem;
+	align-items: center;
+	font-family: roboto;
+	font-size: 1.5rem;
+	color: white;
+
+}
+.shortTask-parent-container-completed .shortTask-task{
+	text-decoration: line-through;
+	text-decoration-color: rgb(255, 255, 255);
+	text-decoration-thickness: 0.17rem;
+}
+.shortTask-checkbox{
+	margin-right: 1rem;
+	font-size: 1rem;
+}
+.shortTask-checkbox-checked{
+	margin-right: 1rem;
+	font-size: 1.2rem;
+}
+

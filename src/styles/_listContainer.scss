@@ -1,0 +1,32 @@
+.listContainer-parent-container{
+	background-color: inherit;
+	grid-area: listContainer;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas: 'list list list list';
+	justify-items: center;
+	row-gap: 3rem;
+	padding: 2rem 0;
+}
+@media screen and (max-width:1100px){
+	.listContainer-parent-container{
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas: 'list list list';
+	}
+}
+@media screen and (max-width:850px){
+	.listContainer-parent-container{
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: 'list list';
+	}
+	body{
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width:650px){
+	.listContainer-parent-container{
+		grid-template-columns: 1fr;
+		grid-template-areas: 'list';
+	}
+}

@@ -1,0 +1,66 @@
+.list-parent-container{
+	border: 1px solid yellow;
+	display: grid;
+	width: 15rem;
+	height: 14.2rem;
+	grid-template-rows: 1fr 4fr 0.6fr;
+	border-radius: 1.3rem;
+	box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.6), 4px 4px 4px rgba(0, 0, 0, 0.6);
+}
+.completed-list{
+	border: 1px solid rgb(2, 235, 60);
+	& .list-name-link{
+		border-bottom: 1px solid rgb(2, 235, 60);
+	}
+	& .link-delete-btn{
+		border-top: 1px solid rgb(2, 235, 60);
+	}
+}
+.incomplete-list{
+	border: 1px solid rgb(0, 247, 255);
+	& .list-name-link{
+		border-bottom: 1px solid rgb(0, 247, 255);
+	}
+	& .link-delete-btn{
+		border-top: 1px solid rgb(0, 247, 255);
+	}
+}
+.list-name-link{
+	color: white;
+	font-size: 2rem;
+	text-align: center;
+	background-color: inherit;
+	font-family: Sniglet;
+	border-bottom: 1px solid yellow;
+	padding: 0.4rem 0;
+	
+}
+.list-shortTaskContainer-link{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.link-delete-btn{
+	border: none;
+	border-top: 1px solid yellow;
+	background-color: transparent;
+	color: white;
+	font-size: 1.1rem;
+	font-family: kalam;
+	padding: 0.5rem 0;
+
+	&:active{
+		outline: none;
+	}
+
+}
+.list-empty-div{
+	color: white;
+	font-size: 1.5rem;
+	font-family: roboto;
+	height: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	
+}

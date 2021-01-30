@@ -1,0 +1,82 @@
+.listCreator-parent-container{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.397);
+	backdrop-filter: blur(10px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.listCreator-form{
+	display: grid;
+	grid-template-areas: 'listCreator-input listCreator-input' 'listCreator-inupt-task listCreator-inupt-task' 'listCreator-submit-btn listCreator-cancel-btn';
+	align-items: center;
+	width: 60%;
+	height: 40%;
+	
+}
+.listCreator-inupt-task{
+	grid-area: listCreator-inupt-task;
+	background-color: transparent;
+	color: white;
+	font-size: 1.4rem;
+	border: 1px solid white;
+	border-radius: 5px;
+	padding: 0.4rem;
+	width: 80%;
+	
+
+	&::placeholder{
+		color: white;
+	}
+}
+.listCreator-input{
+	grid-area: listCreator-input;
+	background-color: transparent;
+	color: white;
+	font-size: 1.7rem;
+	border: 1px solid white;
+	border-radius: 5px;
+	padding: 0.5rem;
+
+	&::placeholder{
+		color: white;
+	}
+}
+.listCreator-submit-btn{
+	grid-area: listCreator-submit-btn;
+	background-color: transparent;
+	color: white;
+	border: 1px solid white;
+	border-radius: 5px;
+	font-size: 1.4rem;
+	justify-self: center;
+	padding: 0.3rem 2rem;
+	cursor: pointer;
+
+	&:hover{
+		color: black;
+		background-color: white;
+		transition-duration: 0.2s;
+		transition-timing-function: ease;
+	}
+}
+.listCreator-cancel-btn{
+	grid-area: listCreator-cancel-btn;
+	background-color: transparent;
+	color: white;
+	border: 1px solid white;
+	border-radius: 5px;
+	font-size: 1.4rem;
+	justify-self: center;
+	padding: 0.3rem 2rem;
+	cursor: pointer;
+
+	&:hover{
+		color: black;
+		background-color: white;
+		transition-duration: 0.2s;
+		transition-timing-function: ease;
+	}
+}

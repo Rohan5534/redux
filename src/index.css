@@ -1,0 +1,627 @@
+.task-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 0.4rem;
+  color: whitesmoke;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.task-text {
+  padding: 0.5rem 2rem;
+  font-size: 2rem;
+  font-family: kalam !important;
+}
+
+.task-btn-container {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.task-delete-btn, .task-update-btn {
+  color: whitesmoke;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+}
+
+.task-delete-btn i, .task-update-btn i {
+  font-size: 1.4rem;
+}
+
+.task-container-updating input {
+  background-color: transparent;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1.8rem;
+  color: #b9b9b9;
+}
+
+@media screen and (max-width: 600px) {
+  .task-btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.taskContainer-parent-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: taskContainer-parent-container;
+      grid-template-areas: 'list-name . . taksContainer-markAllDone-btn taksContainer-deleteList-btn taskContainer-home-link' 'form  form form form form form' 'todo  todo todo todo todo todo';
+  padding: 1rem 1rem;
+  justify-items: stretch;
+}
+
+.taskContainer-list-name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: list-name;
+  font-size: 4rem;
+  font-family: merinda one;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.taksContainer-deleteList-btn {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: taksContainer-deleteList-btn;
+}
+
+.taksContainer-markAllDone-btn {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: taksContainer-markAllDone-btn;
+}
+
+.taskContainer-home-link {
+  -ms-grid-row: 1;
+  -ms-grid-column: 6;
+  grid-area: taskContainer-home-link;
+  text-decoration: none;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: whitesmoke;
+}
+
+.taskContainer-form {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-area: form;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 1rem;
+}
+
+.taskContainer-form-input {
+  max-width: 80vw;
+  min-width: 60vw;
+  height: 2rem;
+  outline: none;
+  background-color: #252525;
+  outline: none;
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.4rem;
+  padding-left: 0.8rem;
+}
+
+.taskContainer-form-submit-btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  height: 100%;
+  margin-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.taskContainer-form-submit-btn i {
+  font-size: 2.357rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.taksContainer-markAllDone-btn, .taksContainer-deleteList-btn, .taskContainer-home-link {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-family: merinda one;
+}
+
+.taksContainer-markAllDone-btn i, .taksContainer-deleteList-btn i, .taskContainer-home-link i {
+  padding-right: 0.6rem;
+}
+
+.taskContainer-todo-container {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-area: todo;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.task-container-completed .task-text {
+  text-decoration: line-through;
+  -webkit-text-decoration-color: white;
+          text-decoration-color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .taskContainer-parent-container {
+        grid-template-areas: 'form' 'todo';
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+  }
+}
+
+.list-parent-container {
+  border: 1px solid yellow;
+  display: -ms-grid;
+  display: grid;
+  width: 15rem;
+  height: 14.2rem;
+  -ms-grid-rows: 1fr 4fr 0.6fr;
+      grid-template-rows: 1fr 4fr 0.6fr;
+  border-radius: 1.3rem;
+  -webkit-box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.6), 4px 4px 4px rgba(0, 0, 0, 0.6);
+          box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.6), 4px 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.completed-list {
+  border: 1px solid #02eb3c;
+}
+
+.completed-list .list-name-link {
+  border-bottom: 1px solid #02eb3c;
+}
+
+.completed-list .link-delete-btn {
+  border-top: 1px solid #02eb3c;
+}
+
+.incomplete-list {
+  border: 1px solid #00f7ff;
+}
+
+.incomplete-list .list-name-link {
+  border-bottom: 1px solid #00f7ff;
+}
+
+.incomplete-list .link-delete-btn {
+  border-top: 1px solid #00f7ff;
+}
+
+.list-name-link {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  background-color: inherit;
+  font-family: Sniglet;
+  border-bottom: 1px solid yellow;
+  padding: 0.4rem 0;
+}
+
+.list-shortTaskContainer-link {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.link-delete-btn {
+  border: none;
+  border-top: 1px solid yellow;
+  background-color: transparent;
+  color: white;
+  font-size: 1.1rem;
+  font-family: kalam;
+  padding: 0.5rem 0;
+}
+
+.link-delete-btn:active {
+  outline: none;
+}
+
+.list-empty-div {
+  color: white;
+  font-size: 1.5rem;
+  font-family: roboto;
+  height: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.listContainer-parent-container {
+  background-color: inherit;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: listContainer;
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: 'list list list list';
+  justify-items: center;
+  row-gap: 3rem;
+  padding: 2rem 0;
+}
+
+@media screen and (max-width: 1100px) {
+  .listContainer-parent-container {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 'list list list';
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .listContainer-parent-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'list list';
+  }
+  body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .listContainer-parent-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'list';
+  }
+}
+
+.listCreator-parent-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.397);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.listCreator-form {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'listCreator-input listCreator-input' 'listCreator-inupt-task listCreator-inupt-task' 'listCreator-submit-btn listCreator-cancel-btn';
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  height: 40%;
+}
+
+.listCreator-inupt-task {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: listCreator-inupt-task;
+  background-color: transparent;
+  color: white;
+  font-size: 1.4rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 0.4rem;
+  width: 80%;
+}
+
+.listCreator-inupt-task::-webkit-input-placeholder {
+  color: white;
+}
+
+.listCreator-inupt-task:-ms-input-placeholder {
+  color: white;
+}
+
+.listCreator-inupt-task::-ms-input-placeholder {
+  color: white;
+}
+
+.listCreator-inupt-task::placeholder {
+  color: white;
+}
+
+.listCreator-input {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: listCreator-input;
+  background-color: transparent;
+  color: white;
+  font-size: 1.7rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.listCreator-input::-webkit-input-placeholder {
+  color: white;
+}
+
+.listCreator-input:-ms-input-placeholder {
+  color: white;
+}
+
+.listCreator-input::-ms-input-placeholder {
+  color: white;
+}
+
+.listCreator-input::placeholder {
+  color: white;
+}
+
+.listCreator-submit-btn {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: listCreator-submit-btn;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding: 0.3rem 2rem;
+  cursor: pointer;
+}
+
+.listCreator-submit-btn:hover {
+  color: black;
+  background-color: white;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.listCreator-cancel-btn {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: listCreator-cancel-btn;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding: 0.3rem 2rem;
+  cursor: pointer;
+}
+
+.listCreator-cancel-btn:hover {
+  color: black;
+  background-color: white;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.shortTask-parent-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 0.6rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: roboto;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.shortTask-parent-container-completed .shortTask-task {
+  text-decoration: line-through;
+  -webkit-text-decoration-color: white;
+          text-decoration-color: white;
+  text-decoration-thickness: 0.17rem;
+}
+
+.shortTask-checkbox {
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+.shortTask-checkbox-checked {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.shortTaskContainer-parent-container {
+  width: 90%;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #1d1d1d;
+  font-size: 16px !important;
+  color: white;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body a {
+  text-decoration: none;
+}
+
+.App {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'heading createNewList' 'listContainer listContainer';
+}
+
+.App-inTaskContainer {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'taskContainer-parent-container';
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.app-heading-link {
+  font-family: 'Merienda One', cursive;
+  font-size: 4rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: heading;
+  padding-left: 2rem;
+  color: white;
+}
+
+.app-createNewList {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: createNewList;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 100%;
+}
+
+.app-createNewList i {
+  padding: 0 !important;
+  margin-right: 0.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.app-createNewList-link {
+  color: white;
+  margin-right: 3rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.7rem;
+  background-color: transparent;
+  border: none;
+  font-family: 'Merienda One', cursive;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+  .App {
+        grid-template-areas: 'heading' 'createNewList' 'listContainer';
+  }
+  .app-heading-link {
+    padding: 0;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .app-createNewList {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .app-createNewList-link {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=index.css.map */
